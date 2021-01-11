@@ -42,8 +42,11 @@ function App() {
       <div class ="form-group">
         <label>Weight :</label>
         <input type = "number"
-        id ="weight"
+         id ="weight"
          placeholder = "Wight in Kg"
+         min = "0"
+         max ="100"
+         maxLength = "4"
          value={input.weight || ''}
          onChange ={e => handleChange("weight",e.target.value)} 
          class = "form-control"/>
@@ -68,16 +71,19 @@ function App() {
         {bmi == 0 &&<><div>
           </div></>
           }
-        {bmi < 18.5 && bmi > 0 &&<><div>
+        {bmi < 18.5 && bmi > 0 &&<><div
+        style = {{color : "Orange" , textShadow : "1px 1px black" , fontSize : "24px" , fontWeight : "bolder"}}>
           you are under Weight
           </div></>
           }
 
-          {bmi > 18.5 && bmi < 25 &&<><div>
-          you are normal
+          {bmi > 18.5 && bmi < 25 &&<><div
+          style = {{color : "rgb(49, 194, 49)" , textShadow : "1px 1px black" , fontSize : "24px" , fontWeight : "bolder"}}>
+          you are Healthy
           </div></>
           }
-          {bmi > 25 &&<><div>
+          {bmi > 25 &&<><div 
+          style = {{color : "Red" , textShadow : "1px 1px black" , fontSize : "24px" , fontWeight : "bolder"}}>
           you are over Weight
           </div></>}
       </div>

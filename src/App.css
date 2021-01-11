@@ -23,8 +23,11 @@
   font-size: 1.6rem;
   font-weight: 600;
   font-style: italic;
- padding: 0%;
+  padding: 0%;
   text-shadow: 1px 1px black;
+}
+.card-footer::selection{
+  color: black;
 }
 textarea.form-control {
   font-weight: bolder;
